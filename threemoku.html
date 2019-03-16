@@ -17,28 +17,26 @@
     </style>
 
     <script type="text/javascript">
-      let tb_obj=null
+      let tbObj=null
       let tb=null
-      let c=0
-      let i=0
+      const PLAYER1 = 1
+      const PLAYER2 = 2
+      let nowPlayer=PLAYER1
 
-      function Click(td_obj){
+      function Click(tdObj){
 
-        if(c%2==0){
-          if(td_obj.innerText=="　"){
-            td_obj.innerText="◯"
-            c+=1
+        if(nowPlayer==Player1){
+          if(tdObj.innerText=="　"){
+            tdObj.innerText="◯"
+            nowPlayer=PLAYER2
 
           }
         }else{
-          if(td_obj.innerText=="　"){
-            td_obj.innerText="●"
-            c+=1
+          if(tdObj.innerText=="　"){
+            tdObj.innerText="●"
+            nowPlayer=PLAYER1
           }
         }
-
-        tb=document.getElementById("filed")
-        console.log(tb.all)
 
       }
 
